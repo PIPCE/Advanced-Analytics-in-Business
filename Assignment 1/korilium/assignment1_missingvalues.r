@@ -21,6 +21,7 @@ library(pdp)
 library(doParallel)
 library(lattice)
 library(VIM)
+library(tuneRanger)
 
 #### loading in datasets ####
 train <- read.csv("Assignment 1/korilium/train.csv", header = T, sep = ";", na.strings = c("", " ", "NA"))
@@ -321,6 +322,29 @@ windows()
 plot(test)
 windows()
 plot(test, step = "thres", imp.mean = FALSE, ylim = c(0, 2e-4))
+
+# using variable selection and then tune ranger 
+train1.4 <- train1.3[,c(1,test$varselect.thres +1) ]
+
+bagging1.2 <- ranger(
+  dependent.variable.name = "fraud",
+  data = train1.4, num.trees = 100,
+  mtry = ncol(train1.3) / 3,
+  probability = F,
+  importance = "impurity",
+  verbose = T, 
+  classification =T
+  )
+bagging.task <- makeClassifTask(data=train1.4, target="fraud")
+
+#estimate Tuning
+estimateTimeTuneRanger(bagging.task)
+#Tuning 
+
+res = tuneRanger(bagging.task, measuer = )
+
+
+
 
 
 stopCluster(cl)
