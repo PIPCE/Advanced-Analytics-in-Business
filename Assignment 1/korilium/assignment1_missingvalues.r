@@ -19,6 +19,8 @@ library(ranger)
 library(missRanger)
 library(pdp)
 library(doParallel)
+library(lattice)
+library(VIM)
 
 #### loading in datasets ####
 train <- read.csv("Assignment 1/korilium/train.csv", header = T, sep = ";", na.strings = c("", " ", "NA"))
@@ -35,7 +37,7 @@ boolean <- function(datastring, negativecondition) {
       datastring[i] <- FALSE
     }
     if (is.na(datastring[i]) == TRUE) {
-      datastring[i] == NA
+      datastring[i] = NA
     }
     else {
       datastring[i] <- TRUE
@@ -98,7 +100,8 @@ cols_factor <- c(
   "third_party_2_vehicle_type",
   "third_party_2_injured",
   "third_party_2_id",
-  "third_party_1_id"
+  "third_party_1_id",
+  "third_party_1_injured"
   )
 train[cols_factor] <- lapply(train[cols_factor], factor, exclude=NULL)
 
@@ -112,7 +115,7 @@ levels(train$policy_coverage_type) <- x
 
 #### need to remove columns: ####
 # dates policy and claim
-# id: policy holder, claim_vehicle 1-3, driver, driver_vehicle and claim id 
+# id: policy holder, claim_vehicle 1-3, driver, repair_id, driver_vehicle, third_party_1-3 and claim id 
 # claim amount 
 
 #### ####
@@ -132,6 +135,10 @@ train1 <- train %>%
     -third_party_3_vehicle_id,
     -third_party_2_vehicle_id,
     -third_party_1_vehicle_id,
+    -third_party_1_id,
+    -third_party_2_id,
+    -third_party_3_id,
+    -repair_id,
     -claim_amount
   )
 
@@ -156,7 +163,7 @@ train1.1 <- train1 %>%
   mutate(repair_shop_age = 2017 - repair_year_birth)%>% 
   mutate(third_party_1_age = 2017 - third_party_1_year_birth) %>%
   mutate(third_party_2_age = 2017 - third_party_2_year_birth) %>%
-  mutate(third_party_2_age =2017 -  third_party_3_year_birth)
+  mutate(third_party_3_age = 2017 -  third_party_3_year_birth)
 
 train1.1$claim_alcohol[is.na(train1.1$claim_alcohol)] <- "N"
 
@@ -175,16 +182,76 @@ train1.2 <- train1.1 %>%
 # one error vehicle age 
 train1.2$claim_vehicle_age[train1.2$claim_vehicle_age < 0] <- NA
 
-#windows() ; vis_dat(train1.2, warn_large_data = F)
-#windows() ; gg_miss_upset(train1.2)
+#### look at the ages ####
+
+windows()
+ggplot(train1.2)+
+geom_density(aes(policy_holder_age, colour ="policy holder age"))+
+geom_density(aes(driver_age, colour ="driver age"))+
+geom_density(aes(claim_vehicle_age, colour = "claim vehicle age"))+
+scale_colour_manual("", 
+                    breaks= c("policy holder age", "driver age", "claim vehicle age"),
+                    values = c("red", "blue", "green"))
+windows()
+ggplot(train1.2)+
+geom_density(aes(repair_shop_age, colour = "repair shop age"))+
+geom_density(aes(third_party_1_age, colour ="third party 1 age"))+
+geom_density(aes(third_party_2_age, colour = "third party 2 age"))+
+scale_color_manual("", 
+                    breaks = c("repair shop age", "third party 1 age",
+                    "third party 2 age"),
+                    values = c("orange", "green", "blue"))
+
+#look at postal code 
+windows()
+ggplot(train1.2)+
+geom_density(aes(third_party_1_postal_code, colour = "third_party_1_postal_code"))+
+geom_density(aes(third_party_2_postal_code, colour = "third_party_2_postal_code"))+
+geom_density(aes(third_party_3_postal_code, colour = "third_party_3_postal_code"))+
+geom_density(aes(repair_postal_code, colour = "repair_postal_code"))+
+geom_density(aes(driver_postal_code, colour = "driver_postal_code"))+
+geom_density(aes(claim_postal_code, colour = "claim_postal_code"))+
+geom_density(aes(policy_holder_postal_code, colour = "policy_holder_postal_code"))+
+scale_colour_manual("", 
+                    breaks= c("third_party_1_postal_code", "third_party_2_postal_code", "third_party_3_postal_code", 
+                    "repair_postal_code", "driver_postal_code", "claim_postal_code", "policy_holder_postal_code"),
+                    values = c("red", "blue", "green", "grey", "black", "orange", "forestgreen"))
+
+#### create factor levels for all missing values  ####
+
+ages <- c( "repair_shop_age", "policy_holder_age", "third_party_1_age",
+            "third_party_2_age","driver_age", "claim_vehicle_age", 
+            "third_party_3_age", "third_party_1_postal_code",
+            "third_party_3_postal_code", "third_party_2_postal_code",
+            "repair_postal_code", "driver_postal_code","claim_postal_code", 
+            "policy_holder_postal_code")
+
+for( i in 1:length(ages)) {
+    if(class(unlist(train1.2[ages[i]])) == "numeric" | class(unlist(train1.2[ages[i]])) == "integer" ) {
+        train1.2[ages[i]] <-
+         factor(cut(as.numeric(unlist(train1.2[ages[i]])), breaks = 10), exclude="")
+
+    }
+}
+
+
+
+
+windows() ; vis_miss(train1.2, warn_large_data = F)
+windows() ; vis_dat(train1.2, warn_large_data = F)
+windows() ; gg_miss_upset(train1.2, nsets=16, nintersects=16)
+#### looking at the dependancy between NA values craete new explanatory variables 
+
+
+
+
 
 #### first part of analyses: creating decision trees ####
 
 # without pruning
-treemax <- rpart(fraud ~ ., data = train1.2, minsplit = 2, cp = 0)
+treemax <- rpart(fraud ~ ., data = train1.2, minsplit = 4, cp = 0)
 windows()
 plot(treemax)
-View(treemax$cptable)
 windows()
 plotcp(treemax)
 
@@ -194,7 +261,7 @@ plotcp(treemax)
 
 train1.3 <- missRanger(train1.2,
   num.trees = 50,
-  max.depth = 2,
+  max.depth = 10,
   splitrule = "extratrees",
   verbose = T,
   respect.unordered.factors = "order"
@@ -214,22 +281,18 @@ bagging1.1 <- ranger(
 end_time <- Sys.time()
 
 end_time - start_time
+auc <- function( scores, lbls )
+{
+  stopifnot( length(scores) == length(lbls) )
+  jp <- which( lbls > 0 ); np <- length( jp )
+  jn <- which( lbls <= 0); nn <- length( jn )
+  s0 <- sum( rank(scores)[jp] )
+  (s0 - np*(np+1) / 2) / (np*nn)
+}   
 
+auc(bagging1.1$predictions, c(1,0))
 #### third part of analyses: studying partial effects ####
 
-
-#### Variable importance ####
-
-windows()
-par(mar = c(4, 11, 4, 4))
-barplot(bagging1.1$variable.importance,
-  horiz = T,
-  las = 1,
-  cex.names = 0.8,
-  cex.axis = 1,
-  beside = F,
-  col = "#5659ddfa"
-)
 
 
 ####  variable selection (cload computing)
@@ -239,19 +302,24 @@ y <- train1.3[, 1]
 cl <- makeCluster(4, type = "PSOCK")
 registerDoParallel(cl)
 test <- VSURF(x, y,
-  ntree = 10,
-  nfor.thres = 10,
-  nfor.pred = 8,
-  nfor.interp = 8,
+  ntree = 50,
+  nfor.thres = 25,
+  nfor.pred = 25,
+  nfor.interp = 25,
   mptry <- (ncol(train1.3) - 1) / 3,
   parallel = TRUE,
   ncores = detectCores(),
   RFimplem = "ranger"
 )
+
 summary(test)
-colnames(train1.3[, (test$varselect.thres + 1)])
+colnames(train1.3[, (test$varselect.thres +1)])
+
+colnames(train1.3[, (test$varselect- +1)])
+
 windows()
 plot(test)
+windows()
 plot(test, step = "thres", imp.mean = FALSE, ylim = c(0, 2e-4))
 
 
@@ -300,6 +368,37 @@ end_time <- Sys.time()
 
 end_time - start_time
 
+
+#### Variable importance ####
+
+windows()
+par(mar = c(4, 7, 4, 4), mfrow=c(1,2))
+
+barplot(bagging1.1$variable.importance[1:26],
+  horiz = T,
+  las = 1,
+  cex.names = 0.6,
+  cex.axis = 1,
+  beside = F,
+  col = "#5659ddfa"
+)
+barplot(bagging1.1$variable.importance[27:58],
+  horiz = T,
+  las = 1,
+  cex.names = 0.6,
+  cex.axis = 1,
+  beside = F,
+  col = "#5659ddfa"
+)
+
+windows(); par(mar = c(4, 7, 4, 4))
+barplot(test$imp.varselect.thres, 
+    horiz = T,
+    las =1,
+    cex.names=0.6,
+    beside=F,
+    col = "red", 
+    names.arg = colnames(train1.3[, (test$varselect.thres +1)]))
 
 
 
