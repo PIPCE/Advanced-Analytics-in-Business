@@ -25,8 +25,9 @@ library(mice)
 library(tuneRanger)
 
 #### loading in datasets ####
-train <- read.csv("Assignment 1/korilium/train.csv", 
-                  header = T, sep = ";", na.strings = c("", " ", "NA"))
+train <- read.csv("Assignment 1/korilium/train.csv",
+  header = T, sep = ";", na.strings = c("", " ", "NA")
+)
 
 dim(train)
 str(train)
@@ -306,7 +307,7 @@ bagging1.1 <- ranger(
 
 
 
-####  variable selection (cload computing) #CPU to slow!!!! 
+####  variable selection (cload computing) #CPU to slow!!!!
 
 x <- train1.3[, -1]
 y <- train1.3[, 1]
@@ -322,17 +323,24 @@ test <- VSURF(x, y,
   ncores = detectCores(),
   RFimplem = "ranger",
   max.depth = 60,
-  num.random.split = 1)
+  num.random.split = 1
+)
 
-test1.1 <- VSURF_thres(x,y, ntree= 300, RFimplem = "ranger",
-      parallel=TRUE)
+test1.1 <- VSURF_thres(x, y,
+  ntree = 300, RFimplem = "ranger",
+  parallel = TRUE
+)
 
-VSURF_interp(x,y, ntree= 50, RFimplem = "ranger",
-      parallel=TRUE, vars= test1.1$varselect.thres,
-      max.depth = 40 )
+VSURF_interp(x, y,
+  ntree = 50, RFimplem = "ranger",
+  parallel = TRUE, vars = test1.1$varselect.thres,
+  max.depth = 40
+)
 
-VSURF_pred(x,y, ntree= 300, RFimplem = "ranger",
-      parallel=TRUE)
+VSURF_pred(x, y,
+  ntree = 300, RFimplem = "ranger",
+  parallel = TRUE
+)
 summary(test)
 colnames(train1.3[, (test$varselect.thres + 1)])
 
@@ -357,7 +365,7 @@ bagging1.2 <- ranger(
   verbose = T,
   classification = T
 )
-####CPU too slow!!! 
+#### CPU too slow!!!
 bagging.task <- makeClassifTask(data = train1.4, target = "fraud")
 
 # estimate Tuning

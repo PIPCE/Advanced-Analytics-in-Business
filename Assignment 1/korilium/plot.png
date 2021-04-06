@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1229.00" height="634.00" viewBox="0 0 1229.00 634.00">
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, polygon, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+<clipPath id="c0"><rect x="0.00" y="0.00" width="1229.00" height="634.00" /></clipPath>
+<clipPath id="c1"><rect x="0.00" y="0.00" width="1229.00" height="634.00" /></clipPath>
+</defs>
+<rect width="100%" height="100%" style="stroke: none; fill: #FFFFFF;" />
+<g clip-path="url(#c1)" ><text transform="translate(103.83,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='27.3528px' lengthAdjust='spacingAndGlyphs'>fraud</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(121.42,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='126.7632px' lengthAdjust='spacingAndGlyphs'>policy_holder_expert_id</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(139.01,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='86.0544px' lengthAdjust='spacingAndGlyphs'>driver_expert_id</text></g>
+<polyline clip-path="url(#c1)" points="118.84,399.91 118.84,399.91 136.43,399.91 136.43,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="101.25,399.91 101.25,339.96 127.63,339.96 127.63,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(156.60,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='141.4512px' lengthAdjust='spacingAndGlyphs'>third_party_2_postal_code</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(174.18,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='102.0816px' lengthAdjust='spacingAndGlyphs'>repair_postal_code</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(191.77,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='141.4512px' lengthAdjust='spacingAndGlyphs'>third_party_1_postal_code</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(209.36,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='99.4104px' lengthAdjust='spacingAndGlyphs'>claim_postal_code</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(226.95,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='142.1208px' lengthAdjust='spacingAndGlyphs'>policy_holder_postal_code</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(244.54,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='101.412px' lengthAdjust='spacingAndGlyphs'>driver_postal_code</text></g>
+<polyline clip-path="url(#c1)" points="224.37,399.91 224.37,393.38 241.96,393.38 241.96,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="206.78,399.91 206.78,379.29 233.16,379.29 233.16,393.38 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="189.19,399.91 189.19,364.86 219.97,364.86 219.97,379.29 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="171.60,399.91 171.60,352.03 204.58,352.03 204.58,364.86 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="154.02,399.91 154.02,326.07 188.09,326.07 188.09,352.03 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="114.44,339.96 114.44,255.33 171.06,255.33 171.06,326.07 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(262.13,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='143.4456px' lengthAdjust='spacingAndGlyphs'>third_party_3_vehicle_type</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(279.71,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='112.7448px' lengthAdjust='spacingAndGlyphs'>third_party_3_injured</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(297.30,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='100.728px' lengthAdjust='spacingAndGlyphs'>third_party_3_form</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(314.89,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='116.0856px' lengthAdjust='spacingAndGlyphs'>third_party_3_country</text></g>
+<polyline clip-path="url(#c1)" points="294.72,399.91 294.72,399.83 312.31,399.83 312.31,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="277.13,399.91 277.13,399.87 303.52,399.87 303.52,399.83 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="259.55,399.91 259.55,386.80 290.33,386.80 290.33,399.87 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(332.48,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='126.0936px' lengthAdjust='spacingAndGlyphs'>third_party_1_expert_id</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(350.07,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='126.0936px' lengthAdjust='spacingAndGlyphs'>third_party_2_expert_id</text></g>
+<polyline clip-path="url(#c1)" points="329.90,399.91 329.90,376.65 347.49,376.65 347.49,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(367.65,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='143.4456px' lengthAdjust='spacingAndGlyphs'>third_party_2_vehicle_type</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(385.24,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='100.728px' lengthAdjust='spacingAndGlyphs'>third_party_2_form</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(402.83,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='112.7448px' lengthAdjust='spacingAndGlyphs'>third_party_2_injured</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(420.42,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='116.0856px' lengthAdjust='spacingAndGlyphs'>third_party_2_country</text></g>
+<polyline clip-path="url(#c1)" points="400.25,399.91 400.25,387.83 417.84,387.83 417.84,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="382.66,399.91 382.66,393.87 409.05,393.87 409.05,387.83 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="365.08,399.91 365.08,383.97 395.86,383.97 395.86,393.87 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(438.01,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='100.728px' lengthAdjust='spacingAndGlyphs'>claim_num_injured</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(455.60,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='72.7056px' lengthAdjust='spacingAndGlyphs'>driver_injured</text></g>
+<polyline clip-path="url(#c1)" points="435.43,399.91 435.43,356.15 453.02,356.15 453.02,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(473.18,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='66.0384px' lengthAdjust='spacingAndGlyphs'>claim_police</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(490.77,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='72.7128px' lengthAdjust='spacingAndGlyphs'>claim_alcohol</text></g>
+<polyline clip-path="url(#c1)" points="470.61,399.91 470.61,338.74 488.19,338.74 488.19,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="444.22,356.15 444.22,324.83 479.40,324.83 479.40,338.74 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(508.36,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='141.4512px' lengthAdjust='spacingAndGlyphs'>third_party_3_postal_code</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(525.95,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='96.7464px' lengthAdjust='spacingAndGlyphs'>third_party_3_age</text></g>
+<polyline clip-path="url(#c1)" points="505.78,399.91 505.78,324.35 523.37,324.35 523.37,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(543.54,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='90.0792px' lengthAdjust='spacingAndGlyphs'>repair_shop_age</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(561.13,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='96.7464px' lengthAdjust='spacingAndGlyphs'>third_party_1_age</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(578.71,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='96.7464px' lengthAdjust='spacingAndGlyphs'>third_party_2_age</text></g>
+<polyline clip-path="url(#c1)" points="558.55,399.91 558.55,331.37 576.14,331.37 576.14,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="540.96,399.91 540.96,320.64 567.34,320.64 567.34,331.37 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="514.58,324.35 514.58,316.94 554.15,316.94 554.15,320.64 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="461.81,324.83 461.81,312.01 534.36,312.01 534.36,316.94 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="380.47,383.97 380.47,283.40 498.09,283.40 498.09,312.01 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="338.69,376.65 338.69,266.85 439.28,266.85 439.28,283.40 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(596.30,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='93.3912px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_cyl</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(613.89,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='109.4112px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_brand</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(631.48,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='111.4056px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_power</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(649.07,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='120.1104px' lengthAdjust='spacingAndGlyphs'>policy_coverage_1000</text></g>
+<polyline clip-path="url(#c1)" points="628.90,399.91 628.90,372.05 646.49,372.05 646.49,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="611.31,399.91 611.31,359.19 637.69,359.19 637.69,372.05 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="593.72,399.91 593.72,349.62 624.50,349.62 624.50,359.19 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(666.66,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='101.3976px' lengthAdjust='spacingAndGlyphs'>policy_holder_form</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(684.24,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='60.6888px' lengthAdjust='spacingAndGlyphs'>driver_form</text></g>
+<polyline clip-path="url(#c1)" points="664.08,399.91 664.08,367.08 681.66,367.08 681.66,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(701.83,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='101.4048px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_load</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(719.42,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='101.4048px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_type</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(737.01,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='127.4256px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_fuel_type</text></g>
+<polyline clip-path="url(#c1)" points="716.84,399.91 716.84,332.20 734.43,332.20 734.43,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="699.25,399.91 699.25,326.50 725.64,326.50 725.64,332.20 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="672.87,367.08 672.87,317.16 712.44,317.16 712.44,326.50 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="609.11,349.62 609.11,289.13 692.66,289.13 692.66,317.16 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(754.60,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='116.7552px' lengthAdjust='spacingAndGlyphs'>policy_holder_country</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(772.19,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='76.0464px' lengthAdjust='spacingAndGlyphs'>driver_country</text></g>
+<polyline clip-path="url(#c1)" points="752.02,399.91 752.02,368.98 769.61,368.98 769.61,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(789.77,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='97.416px' lengthAdjust='spacingAndGlyphs'>policy_holder_age</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(807.36,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='56.7072px' lengthAdjust='spacingAndGlyphs'>driver_age</text></g>
+<polyline clip-path="url(#c1)" points="787.19,399.91 787.19,382.66 804.78,382.66 804.78,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(824.95,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='87.4008px' lengthAdjust='spacingAndGlyphs'>policy_start_age</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(842.54,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='101.3976px' lengthAdjust='spacingAndGlyphs'>policy_num_claims</text></g>
+<polyline clip-path="url(#c1)" points="822.37,399.91 822.37,352.27 839.96,352.27 839.96,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(860.13,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='84.0672px' lengthAdjust='spacingAndGlyphs'>claim_language</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(877.71,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='112.7664px' lengthAdjust='spacingAndGlyphs'>policy_num_changes</text></g>
+<polyline clip-path="url(#c1)" points="857.55,399.91 857.55,325.13 875.14,325.13 875.14,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="831.17,352.27 831.17,320.94 866.34,320.94 866.34,325.13 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="795.99,382.66 795.99,318.75 848.75,318.75 848.75,320.94 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="760.81,368.98 760.81,272.18 822.37,272.18 822.37,318.75 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(895.30,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='100.728px' lengthAdjust='spacingAndGlyphs'>third_party_1_form</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(912.89,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='116.0856px' lengthAdjust='spacingAndGlyphs'>third_party_1_country</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(930.48,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='143.4456px' lengthAdjust='spacingAndGlyphs'>third_party_1_vehicle_type</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(948.07,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='108.072px' lengthAdjust='spacingAndGlyphs'>claim_num_vehicles</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(965.66,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='66.7152px' lengthAdjust='spacingAndGlyphs'>claim_cause</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(983.24,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='130.7448px' lengthAdjust='spacingAndGlyphs'>claim_num_third_parties</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1000.83,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='112.7448px' lengthAdjust='spacingAndGlyphs'>third_party_1_injured</text></g>
+<polyline clip-path="url(#c1)" points="980.67,399.91 980.67,393.42 998.25,393.42 998.25,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="963.08,399.91 963.08,376.01 989.46,376.01 989.46,393.42 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="945.49,399.91 945.49,365.11 976.27,365.11 976.27,376.01 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="927.90,399.91 927.90,339.94 960.88,339.94 960.88,365.11 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="910.31,399.91 910.31,338.34 944.39,338.34 944.39,339.94 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="892.72,399.91 892.72,338.56 927.35,338.56 927.35,338.34 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(1018.42,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='98.7408px' lengthAdjust='spacingAndGlyphs'>claim_vehicle_age</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1036.01,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='110.7432px' lengthAdjust='spacingAndGlyphs'>policy_premium_100</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1053.60,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='116.1px' lengthAdjust='spacingAndGlyphs'>policy_coverage_type</text></g>
+<polyline clip-path="url(#c1)" points="1033.43,399.91 1033.43,377.98 1051.02,377.98 1051.02,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="1015.84,399.91 1015.84,348.73 1042.22,348.73 1042.22,377.98 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(1071.19,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='54.7056px' lengthAdjust='spacingAndGlyphs'>claim_age</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1088.77,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='125.4384px' lengthAdjust='spacingAndGlyphs'>policy_next_expiry_age</text></g>
+<polyline clip-path="url(#c1)" points="1068.61,399.91 1068.61,350.96 1086.20,350.96 1086.20,399.91 " style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(1106.36,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='62.6976px' lengthAdjust='spacingAndGlyphs'>claim_liable</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1123.95,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='76.716px' lengthAdjust='spacingAndGlyphs'>repair_country</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1141.54,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='61.3584px' lengthAdjust='spacingAndGlyphs'>repair_form</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(1159.13,409.91) rotate(-90.00)" text-anchor="end" style="font-family: Arial; font-size: 12.00px; " textLength='52.6968px' lengthAdjust='spacingAndGlyphs'>repair_sla</text></g>
+<polyline clip-path="url(#c1)" points="1138.96,399.91 1138.96,355.29 1156.55,355.29 1156.55,399.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="1121.37,399.91 1121.37,356.73 1147.75,356.73 1147.75,355.29 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="1103.78,399.91 1103.78,345.45 1134.56,345.45 1134.56,356.73 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="1077.40,350.96 1077.40,290.77 1119.17,290.77 1119.17,345.45 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="1029.03,348.73 1029.03,285.74 1098.29,285.74 1098.29,290.77 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="910.04,338.56 910.04,240.91 1063.66,240.91 1063.66,285.74 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="791.59,272.18 791.59,227.53 986.85,227.53 986.85,240.91 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="650.89,289.13 650.89,179.17 889.22,179.17 889.22,227.53 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="388.98,266.85 388.98,137.74 770.05,137.74 770.05,179.17 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="274.94,386.80 274.94,96.11 579.52,96.11 579.52,137.74 " style="stroke-width: 0.75;" />
+<polyline clip-path="url(#c1)" points="142.75,255.33 142.75,77.61 427.23,77.61 427.23,96.11 " style="stroke-width: 0.75;" />
+<line clip-path="url(#c1)" x1="59.04" y1="399.91" x2="59.04" y2="59.04" style="stroke-width: 0.75;" />
+<line clip-path="url(#c1)" x1="59.04" y1="399.91" x2="51.84" y2="399.91" style="stroke-width: 0.75;" />
+<line clip-path="url(#c1)" x1="59.04" y1="320.52" x2="51.84" y2="320.52" style="stroke-width: 0.75;" />
+<line clip-path="url(#c1)" x1="59.04" y1="241.14" x2="51.84" y2="241.14" style="stroke-width: 0.75;" />
+<line clip-path="url(#c1)" x1="59.04" y1="161.75" x2="51.84" y2="161.75" style="stroke-width: 0.75;" />
+<line clip-path="url(#c1)" x1="59.04" y1="82.37" x2="51.84" y2="82.37" style="stroke-width: 0.75;" />
+<g clip-path="url(#c1)" ><text transform="translate(41.76,399.91) rotate(-90.00)" text-anchor="middle" style="font-family: Arial; font-size: 12.00px; " textLength='6.6744px' lengthAdjust='spacingAndGlyphs'>0</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(41.76,320.52) rotate(-90.00)" text-anchor="middle" style="font-family: Arial; font-size: 12.00px; " textLength='6.6744px' lengthAdjust='spacingAndGlyphs'>1</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(41.76,241.14) rotate(-90.00)" text-anchor="middle" style="font-family: Arial; font-size: 12.00px; " textLength='6.6744px' lengthAdjust='spacingAndGlyphs'>2</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(41.76,161.75) rotate(-90.00)" text-anchor="middle" style="font-family: Arial; font-size: 12.00px; " textLength='6.6744px' lengthAdjust='spacingAndGlyphs'>3</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(41.76,82.37) rotate(-90.00)" text-anchor="middle" style="font-family: Arial; font-size: 12.00px; " textLength='6.6744px' lengthAdjust='spacingAndGlyphs'>4</text></g>
+<g clip-path="url(#c1)" ><text x="628.90" y="34.67" text-anchor="middle" style="font-family: Arial; font-size: 14.40px; font-weight: bold;" textLength='139.1616px' lengthAdjust='spacingAndGlyphs'>Cluster Dendrogram</text></g>
+<g clip-path="url(#c1)" ><text transform="translate(12.96,309.80) rotate(-90.00)" text-anchor="middle" style="font-family: Arial; font-size: 12.00px; " textLength='34.6896px' lengthAdjust='spacingAndGlyphs'>Height</text></g>
+</svg>
