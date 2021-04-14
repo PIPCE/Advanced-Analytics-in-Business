@@ -42,3 +42,9 @@ def feature_imp_shap(method, covariates, string):
         plt.tight_layout()
         plt.savefig(string+"shap.png")
         plt.close()
+
+        shap.summary_plot(shap_values, covariates, feature_names=list(covariates.columns.values))
+        plt.title('Shap Values all')
+        plt.tight_layout()
+        plt.savefig(string+"shap.png")
+        plt.close()

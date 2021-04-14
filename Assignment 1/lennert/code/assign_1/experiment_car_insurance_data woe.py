@@ -111,6 +111,7 @@ car_insurance_data = datahandler.DataHandler.create_dummies(car_insurance_data,c
 car_insurance_data_train1 = car_insurance_data.iloc[:training_instances]
 car_insurance_data_test1 = car_insurance_data.iloc[training_instances:]
 
+
 """
 Weight of evidence encoding
 """
@@ -134,14 +135,13 @@ car_insurance_data_test1['third_party_2_postal_code'] = car_insurance_data_test1
 car_insurance_data_test1['third_party_3_postal_code'] = car_insurance_data_test1['third_party_3_postal_code'].apply(str)
 car_insurance_data_test1['repair_postal_code'] = car_insurance_data_test1['third_party_3_postal_code'].apply(str)
 
-
-
-column_names_1= datahandler.DataHandler.\
-    feature_selector(car_insurance_data_train1, car_insurance_data_test1, None, fraud_indicators)
+print('The shape of the dataset dummy encoded equals ' + str(car_insurance_data_train1.shape))
 
 
 mean_fraud_amounts = cost[np.nonzero(cost)].mean()
 binaire_cost = cost.copy()
+
+
 
 
 binaire_cost[binaire_cost <= mean_fraud_amounts] = 0
@@ -149,17 +149,48 @@ binaire_cost[binaire_cost > mean_fraud_amounts] = 1
 binaire_cost = np.multiply(np.array(binaire_cost), np.array(fraud_indicators))
 
 
+column_names_1= datahandler.DataHandler.\
+    feature_selector(car_insurance_data_train1, car_insurance_data_test1, None, fraud_indicators)
+
+
 column_names_2= datahandler.DataHandler.\
     feature_selector(car_insurance_data_train1, car_insurance_data_test1, None, binaire_cost)
 
 final_list = list(set(column_names_1) | set(column_names_2))
 
+car_insurance_data_train1 = car_insurance_data_train1[final_list]
+car_insurance_data_test1 = car_insurance_data_test1[final_list]
+
+column_names_3= datahandler.DataHandler.\
+    feature_selector_3(car_insurance_data_train1, car_insurance_data_test1, None, fraud_indicators)
+
+column_names_4= datahandler.DataHandler.\
+    feature_selector_3(car_insurance_data_train1, car_insurance_data_test1, None, binaire_cost)
+
+final_list = list(set(column_names_3) | set(column_names_4))
 
 car_insurance_data_train1 = car_insurance_data_train1[final_list]
 car_insurance_data_test1 = car_insurance_data_test1[final_list]
 
+#
+# column_names_5= datahandler.DataHandler.\
+#     feature_selector_4(car_insurance_data_train1, car_insurance_data_test1, None, fraud_indicators)
+#
+# column_names_6= datahandler.DataHandler.\
+#     feature_selector_4(car_insurance_data_train1, car_insurance_data_test1, None, binaire_cost)
+#
+# final_list = list(set(column_names_5) | set(column_names_6))
+#
+# car_insurance_data_train1 = car_insurance_data_train1[final_list]
+# car_insurance_data_test1 = car_insurance_data_test1[final_list]
+
 datahandler.DataHandler.information_value(car_insurance_data_train1, None,
                                           fraud_indicators, 'Fraud')
+
+datahandler.DataHandler.information_value(car_insurance_data_train1, None,
+                                          binaire_cost, 'Claim_Amount')
+
+
 
 # datahandler.DataHandler.information_value(car_insurance_data_train1, None,
 #                                           binaire_cost, 'Claim_Amount')
@@ -204,10 +235,10 @@ fixed_cost = mean_fraud_amounts
 Learning
 """
 
-methods = ['XGBoost','CS_XGBoost']
+methods = ['CS_XGBoost']
 
 
-optimal_hyperparameter_finder = 'Yes'
+optimal_hyperparameter_finder = 'n'
 
 
 """
@@ -221,7 +252,7 @@ Cross-validations
 
 if optimal_hyperparameter_finder == 'Yes':
     opt_par_dict = Assignment_1.testing_and_plotting.hyperpar_finder(methods,data_train_no_woe,fraud_indicators,
-                                                                     cost,fixed_cost, fold = 2, repeats = 1)
+                                                                     cost,fixed_cost, fold = 2, repeats = 3)
     print(opt_par_dict)
 
 #best results until now

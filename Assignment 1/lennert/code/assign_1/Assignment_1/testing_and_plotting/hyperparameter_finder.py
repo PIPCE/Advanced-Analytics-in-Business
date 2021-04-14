@@ -9,7 +9,7 @@ def hyperpar_finder(methods,
 
     if 'XGBoost' in methods:
         opt_max_depth, opt_n_estimators, opt_lamb_xg, opt_dropout, opt_learning_rate = cv_xgboost(covariates,
-                 fraud_indicators, cost,fixed_cost, [5], [1000], [0.1,1,3,5],[0.3], [0.01],
+                 fraud_indicators, cost,fixed_cost, [5], [1000], [0.1,1,3,5],[0,0.3,0.5], [0.01, 0.1],
                                                                                                fold,
                                                                                               repeats)
         dict.update({"xg_opt_max_depth": opt_max_depth,
@@ -21,7 +21,7 @@ def hyperpar_finder(methods,
     if 'CS_XGBoost' in methods:
         cs_opt_max_depth, cs_opt_n_estimators, cs_opt_lambd_xg, cs_opt_dropout, cs_opt_learning_rate = cv_csxgboost(
             covariates, fraud_indicators, cost, fixed_cost,
-            [5], [1000], [0.1,1,3,5],[0.3], [0.01],  fold, repeats)
+            [5], [1000],  [0.01,0.1,1,3],[0,0.3,0.5], [0.01, 0.1],  fold, repeats)
 
         dict.update({"cs_xg_opt_max_depth": cs_opt_max_depth,
                      "cs_xg_opt_n_estimators": cs_opt_n_estimators,
