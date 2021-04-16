@@ -82,8 +82,8 @@ class DataHandler:
         # continuous NANs are imputed with their mean
 
 
-        clf = VotingSelector(selection_techniques=['WOE','RF','ETC'],exclude_features=exclude_columns,
-                             handle_category='woe',numerical_missing_values= 'median',minimum_votes=3)
+        clf = VotingSelector(selection_techniques=['WOE'],exclude_features=exclude_columns,
+                             handle_category='woe',numerical_missing_values= 'median',minimum_votes=0)
 
         clf.fit(data_train, column_responses)
 
@@ -97,6 +97,24 @@ class DataHandler:
     def feature_selector(data_train, data_test, exclude_columns, column_responses):
         clf = VotingSelector(selection_techniques=['WOE'], exclude_features=exclude_columns,
                              handle_category='woe', numerical_missing_values='median', minimum_votes=1)
+        clf.fit(data_train, column_responses)
+        transformed_data_train = clf.transform(data_train)
+        column_names = transformed_data_train.columns.values
+        return list(column_names)
+
+    @staticmethod
+    def feature_selector_3(data_train, data_test, exclude_columns, column_responses):
+        clf = VotingSelector(selection_techniques=['WOE','RF','ETC'],exclude_features=exclude_columns,
+                             handle_category='woe',numerical_missing_values= 'median',minimum_votes=3)
+        clf.fit(data_train, column_responses)
+        transformed_data_train = clf.transform(data_train)
+        column_names = transformed_data_train.columns.values
+        return list(column_names)
+
+    @staticmethod
+    def feature_selector_4(data_train, data_test, exclude_columns, column_responses):
+        clf = VotingSelector(selection_techniques=['WOE','RF','ETC'],no_of_features=20,exclude_features=exclude_columns,
+                             handle_category='woe',numerical_missing_values= 'median',minimum_votes=1)
         clf.fit(data_train, column_responses)
         transformed_data_train = clf.transform(data_train)
         column_names = transformed_data_train.columns.values
